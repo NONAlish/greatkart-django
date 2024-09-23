@@ -1,0 +1,52 @@
+[
+{
+    "model": "category.category",
+    "pk": 1,
+    "fields": {
+        "category_name": "Jackets",
+        "slug": "jackets",
+        "description": "Jackets",
+        "cat_image": "photos/categories/jackets_7Qpdbdm.jpg"
+    }
+},
+{
+    "model": "category.category",
+    "pk": 2,
+    "fields": {
+        "category_name": "Jeans",
+        "slug": "jeans",
+        "description": "Jeans",
+        "cat_image": "photos/categories/jeans_4EewAnp.jpg"
+    }
+},
+{
+    "model": "category.category",
+    "pk": 3,
+    "fields": {
+        "category_name": "Shoes",
+        "slug": "shoes",
+        "description": "Shoes",
+        "cat_image": "photos/categories/shoes_SjDhHQR.png"
+    }
+},
+{
+    "model": "category.category",
+    "pk": 4,
+    "fields": {
+        "category_name": "T Shirt",
+        "slug": "t-shirt",
+        "description": "T Shirt",
+        "cat_image": "photos/categories/tshirts_Zd71Enn.jpg"
+    }
+},
+{
+    "model": "category.category",
+    "pk": 5,
+    "fields": {
+        "category_name": "Shirt",
+        "slug": "shirt",
+        "description": "Shirt",
+        "cat_image": "photos/categories/shirts_dLisiet.jpg"
+    }
+}
+]

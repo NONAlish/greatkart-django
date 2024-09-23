@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content%}
+<section class="section-intro padding-y-sm">
+    <div class="container">
+
+        <div class="intro-banner-wrap">
+            <img src="{% static 'images/banners/cover.jpg' %}" class="img-fluid rounded">
+        </div>
+
+    </div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+    <div class="container">
+
+        <header class="section-heading">
+            <a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
+            <h3 class="section-title">Popular products</h3>
+        </header><!-- sect-heading -->
+
+
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-3">
+                    <div class="card card-product-grid">
+                        <a href="{{ product.get_url }}" class="img-wrap"><img src="{{ product.images.url }}"></a>
+                        <figcaption class="info-wrap">
+                            <a class="title" href="{{ product.get_url }}">{{ product.product_name }}</a>
+                            <div class="price mt-1">{{ product.price }} $</div>
+                        </figcaption>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+    </div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+<!-- ========================= SECTION ========================= -->
+<section class="section-name padding-y-sm">
+    <div class="container">
+
+        <header class="section-heading">
+            <h3 class="section-title">New arrivals</h3>
+        </header><!-- sect-heading -->
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-product-grid">
+                    <div class="img-wrap"><img src="{% static 'images/items/6.jpg' %}"></div>
+                    <figcaption class="info-wrap">
+                        <div class="title">New product name here</div>
+                        <div class="price mt-1">$99.00</div> <!-- price-wrap.// -->
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+            <div class="col-md-3">
+                <div class="card card-product-grid">
+                    <div class="img-wrap"><img src="{% static 'images/items/7.jpg' %}"></div>
+                    <figcaption class="info-wrap">
+                        <div class="title">Another new product</div>
+                        <div class="price mt-1">$89.00</div> <!-- price-wrap.// -->
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+            <div class="col-md-3">
+                <div class="card card-product-grid">
+                    <div class="img-wrap"><img src="{% static 'images/items/8.jpg' %}"></div>
+                    <figcaption class="info-wrap">
+                        <div class="title">New arrival product</div>
+                        <div class="price mt-1">$150.00</div> <!-- price-wrap.// -->
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+            <div class="col-md-3">
+                <div class="card card-product-grid">
+                    <div class="img-wrap"><img src="{% static 'images/items/9.jpg' %}"></div>
+                    <figcaption class="info-wrap">
+                        <div class="title">Latest product name</div>
+                        <div class="price mt-1">$199.00</div> <!-- price-wrap.// -->
+                    </figcaption>
+                </div>
+            </div> <!-- col.// -->
+        </div> <!-- row.// -->
+
+    </div> <!-- container //  -->
+</section>
+
+
+</body>
+</html>
+
+{% endblock %}
+
+
+<!-- ========================= SECTION MAIN ========================= -->
